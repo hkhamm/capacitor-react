@@ -28,6 +28,7 @@
         "start": "react-scripts start",
         "cap:sync": "npx cap sync",
         "cap:copy": "npx cap copy",
+        "cap:update": "npx cap update",
         "open:android": "npx cap open android",
         "open:ios": "npx cap open ios",
         "lint": "eslint --fix \"src/**/*.{js,ts,jsx,tsx}\"",
