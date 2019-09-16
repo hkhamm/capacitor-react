@@ -1,6 +1,6 @@
 import React, { FC, ChangeEvent } from "react"
 import { useStore } from "./StoreProvider"
-import { makeStyles, TextField } from "@material-ui/core"
+import { makeStyles, TextField, Typography } from "@material-ui/core"
 
 const useStyles = makeStyles({
     app: {
@@ -9,7 +9,16 @@ const useStyles = makeStyles({
         justifyContent: "center",
         height: "100vh"
     },
-    content: {}
+    content: {
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center"
+    },
+    title: {
+        width: 300,
+        textAlign: "center",
+        marginBottom: 16
+    }
 })
 
 const App: FC = () => {
@@ -21,7 +30,11 @@ const App: FC = () => {
     return (
         <div className={classes.app}>
             <div className={classes.content}>
-                <div>Current value: {value ? value : "None"}</div>
+                <div className={classes.title}>
+                    <Typography variant="h2">Welcome to React and Capacitor!</Typography>
+                </div>
+
+                <Typography variant="body1">Current value: {value ? value : "None"}</Typography>
                 <TextField label="New value" margin="normal" variant="outlined" value={value} onChange={changeValue} />
             </div>
         </div>
