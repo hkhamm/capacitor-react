@@ -1,0 +1,7 @@
+{
+    "appId": "com.hkhamm.capacitorreact",
+    "appName": "capacitor-react",
+    "bundledWebRuntime": false,
+    "npmClient": "yarn",
+    "webDir": "build"
+}

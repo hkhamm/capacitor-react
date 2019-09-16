@@ -1,26 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { FC, ChangeEvent } from "react"
+import { useStore } from "./StoreProvider"
+import { makeStyles, TextField } from "@material-ui/core"
 
-const App: React.FC = () => {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const useStyles = makeStyles({
+    app: {
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        height: "100vh"
+    },
+    content: {}
+})
+
+const App: FC = () => {
+    const { value, setValue } = useStore()
+    const classes = useStyles()
+
+    const changeValue = (event: ChangeEvent<HTMLInputElement>) => setValue(event.target.value)
+
+    return (
+        <div className={classes.app}>
+            <div className={classes.content}>
+                <div>Current value: {value ? value : "None"}</div>
+                <TextField label="New value" margin="normal" variant="outlined" value={value} onChange={changeValue} />
+            </div>
+        </div>
+    )
 }
 
-export default App;
+export default App
