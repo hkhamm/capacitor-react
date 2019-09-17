@@ -1,42 +1,49 @@
-import React, { FC, ChangeEvent } from "react"
-import { useStore } from "./StoreProvider"
-import { makeStyles, TextField, Typography } from "@material-ui/core"
+import React, { FC } from "react"
+import { makeStyles } from "@material-ui/core"
+import logo from "./logo.svg"
 
 const useStyles = makeStyles({
     app: {
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        height: "100vh"
+        textAlign: "center"
     },
-    content: {
+    appLogo: {
+        animation: "$appLogoSpin infinite 20s linear",
+        height: "40vmin",
+        pointerEvents: "none"
+    },
+    appHeader: {
+        backgroundColor: "#282c34",
+        minHeight: "100vh",
         display: "flex",
         flexDirection: "column",
-        alignItems: "center"
+        alignItems: "center",
+        justifyContent: "center",
+        fontSize: "calc(10px + 2vmin)",
+        color: "white"
     },
-    title: {
-        width: 300,
-        textAlign: "center",
-        marginBottom: 16
+    appLink: {
+        color: "#61dafb"
+    },
+    "@keyframes appLogoSpin": {
+        from: {
+            transform: "rotate(0deg)"
+        },
+        to: {
+            transform: "rotate(360deg)"
+        }
     }
 })
 
 const App: FC = () => {
-    const { value, setValue } = useStore()
     const classes = useStyles()
-
-    const changeValue = (event: ChangeEvent<HTMLInputElement>) => setValue(event.target.value)
-
     return (
         <div className={classes.app}>
-            <div className={classes.content}>
-                <div className={classes.title}>
-                    <Typography variant="h2">Welcome to React and Capacitor!</Typography>
-                </div>
-
-                <Typography variant="body1">Current value: {value ? value : "None"}</Typography>
-                <TextField label="New value" margin="normal" variant="outlined" value={value} onChange={changeValue} />
-            </div>
+            <header className={classes.appHeader}>
+                <img src={logo} className={classes.appLogo} alt="logo" />
+                <a className={classes.appLink} href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
+                    Learn React
+                </a>
+            </header>
         </div>
     )
 }
