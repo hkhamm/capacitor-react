@@ -33,6 +33,7 @@
         "open:ios": "npx cap open ios",
         "lint": "eslint --fix \"src/**/*.{js,ts,jsx,tsx}\"",
         "build": "react-scripts build && yarn cap:copy",
+        "serve": "yarn build && npx cap serve",
         "pod:update": "pod repo update",
         "test": "react-scripts test",
         "eject": "react-scripts eject"
