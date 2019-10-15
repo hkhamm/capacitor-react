@@ -14,7 +14,7 @@ yarn build
 
 ### iOS
 
-First build the app, then open in Xcode.
+First build the app and open in Xcode.
 
 ```
 yarn open:ios
@@ -24,7 +24,7 @@ Then, click the play button to run your app on a Simulator or Device.
 
 ### Android
 
-First build the app, then open in Android Studio.
+First build the app and open in Android Studio.
 
 ```
 yarn open:android
