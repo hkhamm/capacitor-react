@@ -12,23 +12,23 @@ yarn build
 
 ## Run
 
+### iOS
+
+First build the app, then open in Xcode.
+
+```
+yarn open:ios
+```
+
 ### Android
 
-First build the app.
+First build the app, then open in Android Studio.
 
 ```
 yarn open:android
 ```
 
 Then, click the Run button to run your app on a device or emulator.
-
-### iOS
-
-First build the app.
-
-```
-yarn open:ios
-```
 
 Then, click the play button to run your app on a Simulator or Device.
 
@@ -44,10 +44,10 @@ Then, follow the Android or iOS instrucions above and run the app in the Xcode s
 
 Remove the `server` section from `capacitor.config.json`. Follow these instructions for creating a production build.
 
-### Android
-
-https://www.joshmorony.com/deploying-capacitor-applications-to-android-development-distribution/
-
 ### iOS
 
 https://www.joshmorony.com/deploying-capacitor-applications-to-ios-development-distribution/
+
+### Android
+
+https://www.joshmorony.com/deploying-capacitor-applications-to-android-development-distribution/
