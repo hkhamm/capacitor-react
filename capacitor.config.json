@@ -3,5 +3,8 @@
     "appName": "capacitor-react",
     "bundledWebRuntime": false,
     "npmClient": "yarn",
-    "webDir": "build"
+    "webDir": "build",
+    "server": {
+        "url": "http://localhost:3000"
+    }
 }

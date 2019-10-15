@@ -25,7 +25,7 @@
         "typescript": "3.6.3"
     },
     "scripts": {
-        "start": "react-scripts start",
+        "start": "yarn build && react-scripts start",
         "cap:sync": "npx cap sync",
         "cap:copy": "npx cap copy",
         "cap:update": "npx cap update",
@@ -33,7 +33,6 @@
         "open:ios": "npx cap open ios",
         "lint": "eslint --fix \"src/**/*.{js,ts,jsx,tsx}\"",
         "build": "react-scripts build && yarn cap:copy",
-        "serve": "yarn build && npx cap serve",
         "pod:update": "pod repo update",
         "test": "react-scripts test",
         "eject": "react-scripts eject"
