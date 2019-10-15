@@ -42,7 +42,7 @@ Then, follow the iOS or Android instrucions above and run the app in the Xcode s
 
 ## Deployment
 
-Remove the `server` section from `capacitor.config.json`. Follow these instructions for creating a production build.
+Follow these instructions for creating a production build.
 
 ### iOS
 
