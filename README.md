@@ -20,6 +20,8 @@ First build the app, then open in Xcode.
 yarn open:ios
 ```
 
+Then, click the play button to run your app on a Simulator or Device.
+
 ### Android
 
 First build the app, then open in Android Studio.
@@ -29,8 +31,6 @@ yarn open:android
 ```
 
 Then, click the Run button to run your app on a device or emulator.
-
-Then, click the play button to run your app on a Simulator or Device.
 
 ## Live Reload
 
