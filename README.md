@@ -38,7 +38,7 @@ Then, click the play button to run your app on a Simulator or Device.
 yarn start
 ```
 
-Then, follow the Android or iOS instrucions above and run the app in the Xcode simulator or Android emulator. The app in your simulator or emulator will be now be running from `http://localhost:3000` as configured in `capacitor.config.json`. Any changes you make will be visible immediately.
+Then, follow the Android or iOS instrucions above and run the app in the Xcode simulator or Android emulator. The app in your simulator or emulator will now be running from `http://localhost:3000` as configured in `capacitor.config.json`. Any changes you make will be visible immediately.
 
 ## Deployment
 
